@@ -32,6 +32,8 @@ class Eshop_enqueue_style{
         wp_enqueue_style('main-css');
         wp_register_style('responsive-css',get_template_directory_uri()."/css/responsive.css");
         wp_enqueue_style('responsive-css');
+        wp_register_style('custom-css',get_template_directory_uri()."/css/Eshop-custom.css");
+        wp_enqueue_style('custom-css');
     }
     
 }
@@ -134,100 +136,23 @@ new Eshop_enqueue_style();
   new Eshop_custom_sidebars();
 
   /**
-   * Createing a custom widgets
-   */
-
-class Eshop_Widget extends WP_Widget {
-
-	/**
-	 * Register widget with WordPress.
-	 */
-	function __construct() {
-		parent::__construct(
-			'Footer_widget', // Base ID
-			esc_html__( 'Eshop Menu Widget', 'Eshop' ), // Name
-			array( 'description' => esc_html__( 'Eshop Widget', 'Eshop' ), ) // Args
-		);
-	}
-
-	/**
-	 * Front-end display of widget.
-	 *
-	 * @see WP_Widget::widget()
-	 *
-	 * @param array $args     Widget arguments.
-	 * @param array $instance Saved values from database.
-	 */
-	public function widget( $args, $instance ) {
-		echo $args['before_widget'];
-
-		if ( ! empty( $instance['title'] ) ) {
-			echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'];
-		}
-		
-		echo $args['after_widget'];
-	}
-
-	/**
-	 * Back-end widget form.
-	 *
-	 * @see WP_Widget::form()
-	 *
-	 * @param array $instance Previously saved values from database.
-	 */
-    
-	public function form( $instance ) {
-		$title = ! empty( $instance['title'] ) ? $instance['title'] : '';
-		$menu = ! empty( $instance['menu'] ) ? $instance['menu'] : '';
-		?>
-		<p>
-		<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_attr_e( 'Title:', 'Eshop' ); ?></label> 
-		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
-		<label for="<?php echo esc_attr( $this->get_field_id( 'menu' ) ); ?>"><?php esc_attr_e( 'Select Menu:', 'Eshop' ); ?></label> 
-		<select class="widefat">
-        
-        <option value="">__Select Menu___</option>
-
-        <?php
-        $menus = get_registered_nav_menus();
-        foreach($menus as $id => $name ){
-            ?>
-            <option id="<?php echo esc_attr( $this->get_field_id( 'menu' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'menu' ) ); ?>" value=""><?php echo $name; ?></option>
-            
-            <?php
-        }
-        ?>      
-    
-       </select>
-		
-        </p>
-
-		<?php 
-	}
-
-	/**
-	 * Sanitize widget form values as they are saved.
-	 *
-	 * @see WP_Widget::update()
-	 *
-	 * @param array $new_instance Values just sent to be saved.
-	 * @param array $old_instance Previously saved values from database.
-	 *
-	 * @return array Updated safe values to be saved.
-	 */
-	public function update( $new_instance, $old_instance ) {
-		$instance = array();
-		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? sanitize_text_field( $new_instance['title'] ) : '';
-		$instance['menu'] = ( ! empty( $new_instance['menu'] ) ) ? sanitize_text_field( $new_instance['menu'] ) : '';
-		
-		return $instance;
-	}
-
-} // class Foo_Widget  
-
-
-
-function Eshop_register_widget(){
-    register_widget('Eshop_Widget');
+ * Add a widget to the dashboard.
+ *
+ * This function is hooked into the 'wp_dashboard_setup' action below.
+ */
+function wporg_add_dashboard_widgets() {
+    wp_add_dashboard_widget(
+        'wporg_dashboard_widget',                          // Widget slug.
+        esc_html__( 'Example Dashboard Widget', 'wporg' ), // Title.
+        'wporg_dashboard_widget_render'                    // Display function.
+    ); 
 }
-add_action('widgets_init','Eshop_register_widget');
+add_action( 'wp_dashboard_setup', 'wporg_add_dashboard_widgets' );
+ 
+/**
+ * Create the function to output the content of our Dashboard Widget.
+ */
+function wporg_dashboard_widget_render() {
+    // Display whatever you want to show.
+    esc_html_e( "Howdy! I'm a great Dashboard Widget.", "wporg" );
+}
