@@ -1,145 +1,93 @@
-	
-	<footer id="footer"><!--Footer-->
-		<div class="footer-top">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-2">
-						<div class="companyinfo">
-							<h2><span>e</span>-shopper</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor</p>
-						</div>
-					</div>
-					<div class="col-sm-7">
-						<div class="col-sm-3">
-							<div class="video-gallery text-center">
-								<a href="#">
-									<div class="iframe-img">
-										<img src="<?php echo get_template_directory_uri();?>/images/home/iframe1.png" alt="" />
-									</div>
-									<div class="overlay-icon">
-										<i class="fa fa-play-circle-o"></i>
-									</div>
-								</a>
-								<p>Circle of Hands</p>
-								<h2>24 DEC 2014</h2>
-							</div>
-						</div>
-						
-						<div class="col-sm-3">
-							<div class="video-gallery text-center">
-								<a href="#">
-									<div class="iframe-img">
-										<img src="<?php echo get_template_directory_uri();?>/images/home/iframe2.png" alt="" />
-									</div>
-									<div class="overlay-icon">
-										<i class="fa fa-play-circle-o"></i>
-									</div>
-								</a>
-								<p>Circle of Hands</p>
-								<h2>24 DEC 2014</h2>
-							</div>
-						</div>
-						
-						<div class="col-sm-3">
-							<div class="video-gallery text-center">
-								<a href="#">
-									<div class="iframe-img">
-										<img src="<?php echo get_template_directory_uri();?>/images/home/iframe3.png" alt="" />
-									</div>
-									<div class="overlay-icon">
-										<i class="fa fa-play-circle-o"></i>
-									</div>
-								</a>
-								<p>Circle of Hands</p>
-								<h2>24 DEC 2014</h2>
-							</div>
-						</div>
-						
-						<div class="col-sm-3">
-							<div class="video-gallery text-center">
-								<a href="#">
-									<div class="iframe-img">
-										<img src="<?php echo get_template_directory_uri();?>/images/home/iframe4.png" alt="" />
-									</div>
-									<div class="overlay-icon">
-										<i class="fa fa-play-circle-o"></i>
-									</div>
-								</a>
-								<p>Circle of Hands</p>
-								<h2>24 DEC 2014</h2>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3">
-						<div class="address">
-							<img src="<?php echo get_template_directory_uri();?>/images/home/map.png" alt="" />
-							<p>505 S Atlantic Ave Virginia Beach, VA(Virginia)</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<div class="footer-widget">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-2">
-						<div class="single-widget">
-							<h2>Service</h2>
-							<?php dynamic_sidebar('header-1');?>
-						</div>
-					</div>
-					<div class="col-sm-2">
-						<div class="single-widget">
-							<h2>Quock Shop</h2>
-							<?php dynamic_sidebar('header-1');?>
-						</div>
-					</div>
-					<div class="col-sm-2">
-						<div class="single-widget">
-							<h2>Policies</h2>
-							<?php dynamic_sidebar('header-1');?>
-						</div>
-					</div>
-					<div class="col-sm-2">
-						<div class="single-widget">
-							<h2>About Shopper</h2>
-							<?php dynamic_sidebar('header-1');?>
-						</div>
-					</div>
-					<div class="col-sm-3 col-sm-offset-1">
-						<div class="single-widget">
-							<h2>About Shopper</h2>
-							<form action="#" class="searchform">
-								<input type="text" placeholder="Your email address" />
-								<button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
-								<p>Get the most recent updates from <br />our site and be updated your self...</p>
-							</form>
-						</div>
-					</div>
-					
-				</div>
-			</div>
-		</div>
-		
-		<div class="footer-bottom">
-			<div class="container">
-				<div class="row">
-					<p class="pull-left">Copyright © 2013 E-SHOPPER Inc. All rights reserved.</p>
-					<p class="pull-right">Develop as wordpress theme by <span><a target="_blank" href="">developerlaju</a></span></p>
-				</div>
-			</div>
-		</div>
-		
-	</footer><!--/Footer-->
-	
+<footer class="footer">
 
-  
-    <script src="<?php echo get_template_directory_uri();?>/js/jquery.js"></script>
-	<script src="<?php echo get_template_directory_uri();?>/js/bootstrap.min.js"></script>
-	<script src="<?php echo get_template_directory_uri();?>/js/jquery.scrollUp.min.js"></script>
-	<script src="<?php echo get_template_directory_uri();?>/js/price-range.js"></script>
-    <script src="<?php echo get_template_directory_uri();?>/js/jquery.prettyPhoto.js"></script>
-    <script src="<?php echo get_template_directory_uri();?>/js/main.js"></script>
+<div class="footer-top section">
+<div class="container">
+<div class="row">
+<div class="col-lg-5 col-md-6 col-12">
+
+<div class="single-footer about">
+<div class="logo">
+<a href="index.html"><img src="images/logo2.png" alt="#"></a>
+</div>
+<p class="text">Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue, magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
+<p class="call">Got Question? Call us 24/7<span><a href="tel:123456789">+0123 456 789</a></span></p>
+</div>
+
+</div>
+<div class="col-lg-2 col-md-6 col-12">
+
+<div class="single-footer links">
+<h4>Information</h4>
+<ul>
+<li><a href="#">About Us</a></li>
+<li><a href="#">Faq</a></li>
+<li><a href="#">Terms & Conditions</a></li>
+<li><a href="#">Contact Us</a></li>
+<li><a href="#">Help</a></li>
+</ul>
+</div>
+
+</div>
+<div class="col-lg-2 col-md-6 col-12">
+
+<div class="single-footer links">
+<h4>Customer Service</h4>
+<ul>
+<li><a href="#">Payment Methods</a></li>
+<li><a href="#">Money-back</a></li>
+<li><a href="#">Returns</a></li>
+<li><a href="#">Shipping</a></li>
+<li><a href="#">Privacy Policy</a></li>
+</ul>
+</div>
+
+</div>
+<div class="col-lg-3 col-md-6 col-12">
+
+<div class="single-footer social">
+<h4>Get In Tuch</h4>
+
+<div class="contact">
+<ul>
+<li>NO. 342 - London Oxford Street.</li>
+<li>012 United Kingdom.</li>
+<li><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="274e4941486742544f48570944484a">[email&#160;protected]</a></li>
+<li>+032 3456 7890</li>
+</ul>
+</div>
+
+<ul>
+<li><a href="#"><i class="ti-facebook"></i></a></li>
+<li><a href="#"><i class="ti-twitter"></i></a></li>
+<li><a href="#"><i class="ti-flickr"></i></a></li>
+<li><a href="#"><i class="ti-instagram"></i></a></li>
+</ul>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="copyright">
+<div class="container">
+<div class="inner">
+<div class="row">
+<div class="col-lg-6 col-12">
+<div class="left">
+<p>Copyright © 2020 <a href="http://www.wpthemesgrid.com" target="_blank">Wpthemesgrid</a> - All Rights Reserved.</p>
+</div>
+</div>
+<div class="col-lg-6 col-12">
+<div class="right">
+<img src="images/payments.png" alt="#">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<?php wp_footer(); ?>
 </body>
 </html>

@@ -1,151 +1,299 @@
 <!DOCTYPE html>
-<html <?php language_attributes();?>>
+<html lang="zxx">
 <head>
-    <meta charset="<?php bloginfo('charset');?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title><?php wp_title();?></title>
 
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-    <![endif]-->       
-    <link rel="shortcut icon" href="images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
-    <?php wp_head()?>
-</head><!--/head-->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="copyright" content>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<body>
-	<header id="header"><!--header-->
-		<div class="header_top"><!--header_top-->
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-6">
-						<div class="contactinfo">
-							<ul class="nav nav-pills">
-								<li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
-								<li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-6">
-						<div class="social-icons pull-right">
-							<ul class="nav navbar-nav">
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div><!--/header_top-->
-		
-		<div class="header-middle"><!--header-middle-->
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-4">
-						<div class="logo pull-left">
-							<a href="<?php get_home_url();?>"><img src="<?php echo get_template_directory_uri();?>/images/home/logo.png" alt="" /></a>
-						</div>
-						<div class="btn-group pull-right">
-							<div class="btn-group">
-								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-									USA
-									<span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu">
-									<li><a href="#">Canada</a></li>
-									<li><a href="#">UK</a></li>
-								</ul>
-							</div>
-							
-							<div class="btn-group">
-								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-									DOLLAR
-									<span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu">
-									<li><a href="#">Canadian Dollar</a></li>
-									<li><a href="#">Pound</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-8">
-						<div class="shop-menu pull-right">
-							<ul class="nav navbar-nav">
-								<li><a href="#"><i class="fa fa-user"></i> Account</a></li>
-								<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
-								<li><a href="<?php echo get_template_directory_uri();?>/checkout.php"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-								<li><a href="<?php echo get_template_directory_uri();?>/cart.php"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-								<li><a href="<?php echo get_template_directory_uri();?>/login.php"><i class="fa fa-lock"></i> Login</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div><!--/header-middle-->
-	
-		<div class="header-bottom"><!--header-bottom-->
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-9">
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-						</div>
-						<div class="mainmenu pull-left">
-							<?php wp_nav_menu( array(
-								'theme_location'=>'primary_menu',
-								'container'=>'',
-								'items_wrap'=> '<ul class="nav navbar-nav collapse navbar-collapse">%3$s</ul>'								
+<title>Eshop - eCommerce HTML5 Template.</title>
+<!-- <script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery-migrate-3.0.0.js"></script> -->
+<link rel="icon" type="image/png" href="images/favicon.png">
+
+<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 
 
+<link rel="stylesheet" href="#" id="colors">
+<?php wp_head();?>
+</head>
+<body class="js">
+
+<!-- <div class="preloader">
+<div class="preloader-inner">
+<div class="preloader-icon">
+<span></span>
+<span></span>
+</div>
+</div>
+</div> -->
 
 
+<div class="color-plate ">
+<a class="color-plate-icon"><i class="ti-paint-bucket"></i></a>
+<h4>Eshop Colors</h4>
+<p>Here is some awesome color's available on Eshop Template.</p>
+<span class="color1"></span>
+<span class="color2"></span>
+<span class="color3"></span>
+<span class="color4"></span>
+<span class="color5"></span>
+<span class="color6"></span>
+<span class="color7"></span>
+<span class="color8"></span>
+<span class="color9"></span>
+<span class="color10"></span>
+<span class="color11"></span>
+<span class="color12"></span>
+</div>
 
-							))
-							?>
-							<!-- <ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a href="<?php echo get_home_url();?>" class="active">Home</a></li>
-								<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="shop.php">Products</a></li>
-										<li><a href="product-details.php">Product Details</a></li> 
-										<li><a href="checkout.php">Checkout</a></li> 
-										<li><a href="cart.php">Cart</a></li> 
-										<li><a href="login.php">Login</a></li> 
-                                    </ul>
-                                </li> 
-								<li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="blog.php">Blog List</a></li>
-										<li><a href="blog-single.php">Blog Single</a></li>
-                                    </ul>
-                                </li> 
-								<li><a href="404.php">404</a></li>
-								<li><a href="contact-us.php">Contact</a></li>
-							</ul> -->
-						</div>
-					</div>
-					<div class="col-sm-3">
-						<div class="search_box pull-right">
-							<input type="text" placeholder="Search"/>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div><!--/header-bottom-->
-	</header><!--/header-->
-	
+
+<header class="header shop">
+
+<div class="topbar">
+<div class="container">
+<div class="row">
+<div class="col-lg-6 col-md-12 col-12">
+
+<div class="top-left">
+<ul class="list-main">
+<li><i class="ti-headphone-alt"></i> +060 (800) 801-582</li>
+<li><i class="ti-email"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7e0d0b0e0e110c0a3e0d16110e160b1c501d1113">[email&#160;protected]</a></li>
+</ul>
+</div>
+
+</div>
+<div class="col-lg-6 col-md-12 col-12">
+
+<div class="right-content">
+<ul class="list-main">
+<li><i class="ti-location-pin"></i> Store location</li>
+<li><i class="ti-alarm-clock"></i> <a href="#">Daily deal</a></li>
+<li><i class="ti-user"></i> <a href="#">My account</a></li>
+<li><i class="ti-power-off"></i><a href="login.html#">Login</a></li>
+</ul>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="middle-inner">
+<div class="container">
+<div class="row">
+<div class="col-lg-2 col-md-2 col-12">
+
+<div class="logo">
+<a href="index.html"><img src="images/logo.png" alt="logo"></a>
+</div>
+
+
+<div class="search-top">
+<div class="top-search"><a href="#0"><i class="ti-search"></i></a></div>
+
+<div class="search-top">
+<form class="search-form">
+<input type="text" placeholder="Search here..." name="search">
+<button value="search" type="submit"><i class="ti-search"></i></button>
+</form>
+</div>
+
+</div>
+
+<div class="mobile-nav"></div>
+</div>
+<div class="col-lg-8 col-md-7 col-12">
+<div class="search-bar-top">
+<div class="search-bar">
+<select>
+<option selected="selected">All Category</option>
+<option>watch</option>
+<option>mobile</option>
+<option>kid’s item</option>
+</select>
+<form>
+<input name="search" placeholder="Search Products Here....." type="search">
+<button class="btnn"><i class="ti-search"></i></button>
+</form>
+</div>
+</div>
+</div>
+<div class="col-lg-2 col-md-3 col-12">
+<div class="right-bar">
+
+<div class="sinlge-bar">
+<a href="#" class="single-icon"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+</div>
+<div class="sinlge-bar">
+<a href="#" class="single-icon"><i class="ti-user"></i></a>
+</div>
+<div class="sinlge-bar shopping">
+<a href="#" class="single-icon"><i class="ti-bag"></i> <span class="total-count">2</span></a>
+
+<div class="shopping-item">
+<div class="dropdown-cart-header">
+<span>2 Items</span>
+<a href="#">View Cart</a>
+</div>
+<ul class="shopping-list">
+<li>
+<a href="#" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
+<a class="cart-img" href="#"><img src="images/product-1.jpg" alt="#"></a>
+<h4><a href="#">Woman Ring</a></h4>
+<p class="quantity">1x - <span class="amount">$99.00</span></p>
+</li>
+<li>
+<a href="#" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
+<a class="cart-img" href="#"><img src="images/product-2.jpg" alt="#"></a>
+<h4><a href="#">Woman Necklace</a></h4>
+<p class="quantity">1x - <span class="amount">$35.00</span></p>
+</li>
+</ul>
+<div class="bottom">
+<div class="total">
+<span>Total</span>
+<span class="total-amount">$134.00</span>
+</div>
+<a href="checkout.html" class="btn animate">Checkout</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header-inner">
+<div class="container">
+<div class="cat-nav-head">
+<div class="row">
+<div class="col-lg-3">
+<div class="all-category">
+<h3 class="cat-heading"><i class="fa fa-bars" aria-hidden="true"></i>CATEGORIES</h3>
+<ul class="main-category">
+<li><a href="#">New Arrivals <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+<ul class="sub-category">
+<li><a href="#">accessories</a></li>
+<li><a href="#">best selling</a></li>
+<li><a href="#">top 100 offer</a></li>
+<li><a href="#">sunglass</a></li>
+<li><a href="#">watch</a></li>
+<li><a href="#">man’s product</a></li>
+<li><a href="#">ladies</a></li>
+<li><a href="#">westrn dress</a></li>
+<li><a href="#">denim </a></li>
+</ul>
+</li>
+<li class="main-mega"><a href="#">best selling <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+<ul class="mega-menu">
+<li class="single-menu">
+<a href="#" class="title-link">Shop Kid's</a>
+<div class="image">
+<img src="images/mega-menu1.jpg" alt="#">
+</div>
+<div class="inner-link">
+<a href="#">Kids Toys</a>
+<a href="#">Kids Travel Car</a>
+<a href="#">Kids Color Shape</a>
+<a href="#">Kids Tent</a>
+</div>
+</li>
+<li class="single-menu">
+<a href="#" class="title-link">Shop Men's</a>
+<div class="image">
+<img src="images/mega-menu2.jpg" alt="#">
+</div>
+<div class="inner-link">
+<a href="#">Watch</a>
+<a href="#">T-shirt</a>
+<a href="#">Hoodies</a>
+<a href="#">Formal Pant</a>
+</div>
+</li>
+<li class="single-menu">
+<a href="#" class="title-link">Shop Women's</a>
+<div class="image">
+<img src="images/mega-menu3.jpg" alt="#">
+</div>
+<div class="inner-link">
+<a href="#">Ladies Shirt</a>
+<a href="#">Ladies Frog</a>
+<a href="#">Ladies Sun Glass</a>
+<a href="#">Ladies Watch</a>
+</div>
+</li>
+</ul>
+</li>
+<li><a href="#">accessories</a></li>
+<li><a href="#">top 100 offer</a></li>
+<li><a href="#">sunglass</a></li>
+<li><a href="#">watch</a></li>
+<li><a href="#">man’s product</a></li>
+<li><a href="#">ladies</a></li>
+<li><a href="#">westrn dress</a></li>
+<li><a href="#">denim </a></li>
+</ul>
+</div>
+</div>
+<div class="col-lg-9 col-12">
+<div class="menu-area">
+
+<nav class="navbar navbar-expand-lg">
+<div class="navbar-collapse">
+<div class="nav-inner">
+<ul class="nav main-menu menu navbar-nav">
+<li class="active"><a href="#">Home<i class="ti-angle-down"></i></a>
+<ul class="dropdown">
+<li><a href="index.html">Home Ecommerce V1</a></li>
+<li><a href="index2.html">Home Ecommerce V2</a></li>
+<li><a href="index3.html">Home Ecommerce V3</a></li>
+<li><a href="index4.html">Home Ecommerce V4</a></li>
+</ul>
+</li>
+<li><a href="#">Product</a></li>
+<li><a href="#">Service</a></li>
+<li><a href="#">Shop<i class="ti-angle-down"></i><span class="new">New</span></a>
+<ul class="dropdown">
+<li><a href="shop-grid.html">Shop Grid</a></li>
+<li><a href="shop-list.html">Shop List</a></li>
+<li><a href="shop-single.html">shop Single</a></li>
+<li><a href="cart.html">Cart</a></li>
+<li><a href="checkout.html">Checkout</a></li>
+</ul>
+</li>
+<li><a href="#">Pages<i class="ti-angle-down"></i></a>
+<ul class="dropdown">
+<li><a href="about-us.html">About Us</a></li>
+<li><a href="login.html">Login</a></li>
+<li><a href="register.html">Register</a></li>
+<li><a href="mail-success.html">Mail Success</a></li>
+<li><a href="404.html">404</a></li>
+</ul>
+</li>
+<li><a href="#">Blog<i class="ti-angle-down"></i></a>
+<ul class="dropdown">
+<li><a href="blog-grid.html">Blog Grid</a></li>
+<li><a href="blog-grid-sidebar.html">Blog Grid Sidebar</a></li>
+<li><a href="blog-single.html">Blog Single</a></li>
+<li><a href="blog-single-sidebar.html">Blog Single Sidebar</a></li>
+</ul>
+</li>
+<li><a href="contact.html">Contact Us</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</header>
