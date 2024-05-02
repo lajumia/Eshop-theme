@@ -19,7 +19,31 @@
 <link rel="stylesheet" href="#" id="colors">
 <?php wp_head();?>
 </head>
-<body class="js">
+<body <?php body_class(); ?>>
+
+<?php
+    global $wpdb;
+
+    $table_name = 'eshop_general';
+
+    $results = $wpdb->get_results( "SELECT preloader FROM $table_name" );
+
+    foreach ( $results as $result ) {
+        
+        if($result->preloader == 1){
+            echo '<div class="preloader">
+            <div class="preloader-inner">
+            <div class="preloader-icon">
+            <span></span>
+            <span></span>
+            </div>
+            </div>
+            </div>';
+        }
+        }
+        
+
+?>
 
 <!-- <div class="preloader">
 <div class="preloader-inner">

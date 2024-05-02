@@ -51,8 +51,12 @@ class RegisterScripts{
 
     function enqueue_custom_theme_options_styles($hook) 
     {
-        $a = get_current_screen();
-        print_r($hook);
+        if ( isset( $_GET['page'] )) {
+            // Enqueue Core Admin Styles
+            wp_enqueue_style('bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.css', array());
+
+            wp_enqueue_style('eshop-admin', get_template_directory_uri() . '/includes/theme-options/css/to.css', array());
+        }
            
     }
     
